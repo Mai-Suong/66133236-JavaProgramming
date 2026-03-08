@@ -7,22 +7,27 @@ public class ChuNhat {
 		dai = 5;
 		rong = 7;
 	}
-	public ChuNhat(double cdai, double crong) {
-		dai = cdai;
-		rong = crong;
+	public ChuNhat(double dai, double rong) {
+		this.dai = dai;
+		this.rong = rong;
 		
 	}
-	double getDai(double cdai) {
-		return cdai;
+	double getDai() {
+		return dai;
 	}
-	double getRong(double crong) {
-		return crong;
+	double getRong() {
+		return rong;
 	}
 	void setDai(double cdai) {
 		dai = cdai;
 	}
 	void setRong(double crong) {
 		rong = crong;
+	}
+	// phương thức tostring
+	public String toString() {
+		String s = "Hinh nay co chieu dai = " + dai + " va chieu rong = " + rong;
+		return s;
 	}
 
 }

@@ -26,8 +26,8 @@ public class SanPham {
 	}
 
 	public void setMaSP(String MaSP) {
-		if(maSP == null) maSP = "error!";
-		else maSP = MaSP;
+		if(MaSP != null && MaSP.length() > 0) maSP = MaSP;
+		else maSP = "error!";
 	}
 
 	public String getTenSP() {
@@ -35,6 +35,7 @@ public class SanPham {
 	}
 
 	public void setTenSP(String TenSP) {
+		if (TenSP != null && TenSP.length() > 0)
 		tenSP = TenSP;
 	}
 
@@ -43,7 +44,7 @@ public class SanPham {
 	}
 
 	public void setGia(double DonGia) {
-		if (gia > 0) gia = DonGia;
+		if (DonGia > 0) gia = DonGia;
 	}
 
 	public int getSoLuong() {
@@ -51,7 +52,7 @@ public class SanPham {
 	}
 
 	public void setSoLuong(int SoLuong) {
-		if (soLuong >= 0) soLuong = SoLuong;
+		if (SoLuong >= 0) soLuong = SoLuong;
 	}
 	public double tinhThanhTien() {
 		return gia * soLuong;
@@ -65,7 +66,4 @@ public class SanPham {
 
 
 	}
-	
-	
-
 }

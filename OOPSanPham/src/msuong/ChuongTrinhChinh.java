@@ -7,7 +7,7 @@ public class ChuongTrinhChinh {
 		SanPham sp2 = new SanPham("02", "Sua", 13000, 2);
 		sp1.hienThiThongTin();
 		sp2.hienThiThongTin();
-
+		
 	}
 
 }

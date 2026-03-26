@@ -1,11 +1,15 @@
 package msuong;
 
+import java.util.Scanner;
+
 public class SanPham {
+	// thuoc tinh
 	private String maSP;
 	private String tenSP;
 	private double gia;
 	private int soLuong;
 	
+	//khoi tao
 	public SanPham() {
 		maSP = "01";
 		tenSP = "banh";
@@ -20,42 +24,53 @@ public class SanPham {
 		gia = DonGia;
 		soLuong = SoLuong;
 	}
-
-	public String getMaSP() {
-		return maSP;
+	
+	//khai bao 
+//	public String getMaSP() {
+//		return maSP;
+//	}
+//
+//	public void setMaSP(String MaSP) {
+//		if(MaSP != null && MaSP.length() > 0) maSP = MaSP;
+//		else maSP = "error!";
+//	}
+//
+//	public String getTenSP() {
+//		return tenSP;
+//	}
+//
+//	public void setTenSP(String TenSP) {
+//		if (TenSP != null && TenSP.length() > 0)
+//		tenSP = TenSP;
+//	}
+//
+//	public double getGia() {
+//		return gia;
+//	}
+//
+//	public void setGia(double DonGia) {
+//		if (DonGia > 0) gia = DonGia;
+//	}
+//
+//	public int getSoLuong() {
+//		return soLuong;
+//	}
+//
+//	public void setSoLuong(int SoLuong) {
+//		if (SoLuong >= 0) soLuong = SoLuong;
+//	}
+//	public double tinhThanhTien() {
+//		return gia * soLuong;
+//	}
+	
+	//ham nhap, xuat
+	public void Nhap() {
+		Scanner sc = new Scanner(System.in);
+		
+		
 	}
-
-	public void setMaSP(String MaSP) {
-		if(MaSP != null && MaSP.length() > 0) maSP = MaSP;
-		else maSP = "error!";
-	}
-
-	public String getTenSP() {
-		return tenSP;
-	}
-
-	public void setTenSP(String TenSP) {
-		if (TenSP != null && TenSP.length() > 0)
-		tenSP = TenSP;
-	}
-
-	public double getGia() {
-		return gia;
-	}
-
-	public void setGia(double DonGia) {
-		if (DonGia > 0) gia = DonGia;
-	}
-
-	public int getSoLuong() {
-		return soLuong;
-	}
-
-	public void setSoLuong(int SoLuong) {
-		if (SoLuong >= 0) soLuong = SoLuong;
-	}
-	public double tinhThanhTien() {
-		return gia * soLuong;
+	public double getThueNhapKhau() {
+		return gia * 0.1;
 	}
 	public void hienThiThongTin() {
 		System.out.println("Ma san pham: " + maSP);
@@ -63,7 +78,6 @@ public class SanPham {
 		System.out.println("Don gia: " + gia);
 		System.out.println("So luong san pham: " + soLuong);
 		System.out.println("Thanh tien: " + tinhThanhTien());
-
-
+		System.out.println("Thue nhap khau la:" + getThueNhapKhau());
 	}
 }

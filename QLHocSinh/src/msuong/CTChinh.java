@@ -46,7 +46,7 @@ public class CTChinh {
 		hs3.setTuoiHS(tuoiHS3);
 
 		// Hoi nguoi dung nhap vao lop
-		System.out.print("Moi nhap lop hoc sinh 3: ");
+		System.out.println("Moi nhap lop hoc sinh 3: ");
 		String lopHS3 = sc.nextLine();
 			// goi vao bien hs3
 		hs3.setLopHS(lopHS3);
@@ -64,17 +64,18 @@ public class CTChinh {
 			HocSinh hsi = new HocSinh();
 			
 			// Hoi nguoi dung nhap vao ten
-			System.out.print("Moi nhap ten hoc sinh: " + i);
+			System.out.println("\nMoi nhap ten hoc sinh: " + i);
 			String tenHSi = sc.nextLine();
 			hsi.setTenHS(tenHSi);
 			
 			// Hoi nguoi dung nhap vao ten
-			System.out.print("Moi nhap ten hoc sinh: " + i);
+			System.out.println("Moi nhap tuoi hoc sinh: " + i);
 			short tuoiHSi = sc.nextShort();
+			sc.nextLine();
 			hsi.setTuoiHS(tuoiHSi);
 			
 			// Hoi nguoi dung nhap vao ten
-			System.out.print("Moi nhap ten hoc sinh: " + i);
+			System.out.println("Moi nhap lop hoc sinh: " + i);
 			String lopHSi = sc.nextLine();
 			hsi.setLopHS(lopHSi);
 			
@@ -92,11 +93,8 @@ public class CTChinh {
 			//bo sung them
 		HocSinh hsThem = new HocSinh();
 			//nhap tu ban phim
-		
 		dsHS.add(hsThem);
 			// xuat ra 
-		
-			// in ra
 		for (int i = 0; i < N; i++) {
 			System.out.print(dsHS.get(i).toString());
 		}

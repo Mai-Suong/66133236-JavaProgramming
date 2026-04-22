@@ -47,7 +47,7 @@ public class HocSinh {
 	//toString
 	@Override
 	public String toString() {
-		return "HocSinh [tenHS= " + tenHS + ", tuoiHS= " + tuoiHS + ", lopHS= " + lopHS + "]";
+		return "Ten hoc sinh " + tenHS + "\ntuoi hoc sinh= " + tuoiHS + "\nlop hoc sinh= " + lopHS;
 	}
 	
 }

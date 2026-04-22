@@ -42,6 +42,7 @@ public class CTChinh {
 		// Hoi nguoi dung nhap vao tuoi
 		System.out.print("Moi nhap tuoi hoc sinh 3: ");
 		short tuoiHS3 = sc.nextShort();
+		sc.nextLine();
 			// goi vao bien hs3
 		hs3.setTuoiHS(tuoiHS3);
 
@@ -58,7 +59,7 @@ public class CTChinh {
 		//3.a Nhap ds n hoc sinh
 		ArrayList<HocSinh> dsHS = new ArrayList<HocSinh>();
 			//nhap n
-		int N = 3; //nhap n tu ban phim
+		int N = 4; //nhap n tu ban phim
 		
 		for (int i=0; i<N; i++) {
 			HocSinh hsi = new HocSinh();
@@ -86,32 +87,47 @@ public class CTChinh {
 		
 		//In ra 
 		for (int i = 0; i < N; i++) {
-			System.out.print(dsHS.get(i).toString());
+			System.out.println(dsHS.get(i).toString());
 			
 		}
 		//4
 			//bo sung them
+		System.out.println("Nhap hoc sinh them");
 		HocSinh hsThem = new HocSinh();
-			//nhap tu ban phim
+		
+		//nhap tu ban phim
+		System.out.println("Nhap ten can them: ");
+		hsThem.setTenHS(sc.nextLine());
+		
+		System.out.println("Nhap tuoi can them: ");
+		hsThem.setTuoiHS(sc.nextShort());
+		sc.nextLine();
+		
+		System.out.println("Nhap lop ban can them: ");
+		hsThem.setLopHS(sc.nextLine());
+		// them vao ds
 		dsHS.add(hsThem);
 			// xuat ra 
-		for (int i = 0; i < N; i++) {
-			System.out.print(dsHS.get(i).toString());
+		for (int i = 0; i < dsHS.size(); i++) {
+			System.out.println(dsHS.get(i).toString());
 		}
 		
 		
 		//5 
 			//tim va xoa hoc sinh ten Hoa
-		for (int i=0; i<N; i++) {
-			HocSinh hsTim = new HocSinh();
-			if (hsTim.getTenHS() == "Hoa") {
-				dsHS.remove(hsTim);
+		System.out.println("Tim va xoa ban ten Hoa");
+		for (int i=0; i<dsHS.size(); i++) {
+			// dung equalsIgnoreCase de gõ Hoa hay hoa may cung hieu
+			if (dsHS.get(i).getTenHS().equals("Hoa")) {
+				dsHS.remove(i);
+				System.out.println("Da xoa ban Hoa!");
 				break;
 			}
 		}
 			//xuat lai ds 
-		for (int i=0; i<N; i++) {
-			System.out.print(dsHS.get(i).toString());
+		System.out.println("Danh sach cuoi cung la: ");
+		for (int i=0; i<dsHS.size(); i++) {
+			System.out.println(dsHS.get(i).toString());
 		}
 	}
 

@@ -1,6 +1,7 @@
 package thigk2.samthimaisuong;
 
 public class SanPham {
+	//a. Xây dựng lớp SanPham 
 	private String maSP;
 	private String tenSP;
 	private String loaiSP;

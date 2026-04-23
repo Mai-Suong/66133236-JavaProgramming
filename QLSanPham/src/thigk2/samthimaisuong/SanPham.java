@@ -4,12 +4,12 @@ public class SanPham {
 	private String maSP;
 	private String tenSP;
 	private String loaiSP;
-	private double giaBan;
+	private double giaBan; //thuộc tính tự thêm
 	
-	//ham khoi tao khong tham so
+	//hàm khởi tạo không tham số
 	public SanPham() { }
 	
-	// ham khoi tao co tham so
+	//hàm khởi tạo có tham số
 	public SanPham(String maSP, String tenSP, String loaiSP, double giaBan) {
 		this.maSP = maSP;
 		this.tenSP = tenSP;
@@ -17,7 +17,7 @@ public class SanPham {
 		this.giaBan = giaBan;
 	}
 
-	// cac getter va setter
+	// các getter và setter
 	public String getMaSP() {
 		return maSP;
 	}
@@ -50,7 +50,7 @@ public class SanPham {
 		this.giaBan = giaBan;
 	}
 
-	//phuog thuc toString
+	//phương thức toString
 	@Override
 	public String toString() {
 		return "Ma san pham: " + maSP + "\nTen san pham: " + tenSP + "Loai san pham: " + loaiSP + "Gia ban: " + giaBan;
